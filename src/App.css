@@ -58,15 +58,15 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Front face (emoji side) */
-.card-front {
-  background-color: #3498db;
+/* Back side: QUESTION MARK initially visible */
+.card-back {
+  background-color: #34495e;
   color: white;
 }
 
-/* Back face (question mark side) */
-.card-back {
-  background-color: #34495e;
+/* Front side: EMOJI revealed after flip */
+.card-front {
+  background-color: #3498db;
   color: white;
   transform: rotateY(180deg);
 }
