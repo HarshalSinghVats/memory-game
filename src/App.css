@@ -15,7 +15,7 @@
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(4, 100px); /* Default 4 columns of 100px */
+  grid-template-columns: repeat(4, 100px);
   grid-gap: 15px;
   justify-content: center;
   margin-top: 10px;
@@ -27,7 +27,7 @@
 .card {
   width: 100px;
   height: 100px;
-  perspective: 1000px; /* Needed for 3D flip */
+  perspective: 1000px;
   cursor: pointer;
 }
 
@@ -58,15 +58,17 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Front face (emoji side) */
 .card-front {
   background-color: #3498db;
   color: white;
-  transform: rotateY(180deg);
 }
 
+/* Back face (question mark side) */
 .card-back {
   background-color: #34495e;
   color: white;
+  transform: rotateY(180deg);
 }
 
 /* Hover effect */
@@ -112,41 +114,40 @@ button:hover {
 
 /* Mobile Styles */
 @media (max-width: 600px) {
-  /* Adjust game container padding for mobile */
   .game-container {
-    padding: 15px; /* Reduce padding for mobile */
+    padding: 15px;
   }
 
-  /* Game board adjustments for mobile */
   .game-board {
-    grid-template-columns: repeat(4, 70px); /* 4 columns of 70px */
-    grid-gap: 10px; /* Smaller gap between cards */
+    grid-template-columns: repeat(4, 70px);
+    grid-gap: 10px;
     justify-content: center;
     width: 100%;
-    max-width: 90%; /* Ensure the board takes up less width */
+    max-width: 90%;
     margin-top: 15px;
     margin-bottom: 25px;
   }
 
-  /* Card adjustments for mobile */
   .card {
     width: 70px;
     height: 70px;
   }
 
-  /* Title adjustments */
+  .card-front,
+  .card-back {
+    font-size: 24px;
+  }
+
   h1 {
     font-size: 24px;
     margin-bottom: 20px;
   }
 
-  /* Button size adjustments */
   button {
     padding: 10px 20px;
     font-size: 16px;
   }
 
-  /* Information Section */
   .info {
     margin-top: 20px;
   }
