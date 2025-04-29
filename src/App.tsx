@@ -78,7 +78,7 @@ function App() {
           <div key={index} className={`card ${flipped[index] || matched[index] ? 'flipped' : ''}`}>
             <div className="card-inner" onClick={() => handleCardClick(index)}>
               <div className="card-front">{emoji}</div>
-              <div className="card-back">?</div>
+              <div className="card-back"></div>
             </div>
           </div>
 
